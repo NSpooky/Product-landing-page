@@ -5,13 +5,28 @@
 }
 
 header {
+    top: 0;
+    position: fixed;
     display: flex;
     width: 100%;
     align-items: center;
     text-align: center;
     justify-content: space-between;
     height: 60px;
-    margin-bottom: 100px;
+    background: pink;
+    z-index: 100;
+    padding: 0 10px;
+    border-bottom: 2px solid black;
+}
+
+#saludo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
 }
 
 #header-img {
@@ -24,7 +39,6 @@ header {
 }
 
 h1 { 
-    border: 1px solid red;
     margin-right:50px;
     margin-left: 5px;
     display: flex;
@@ -33,7 +47,6 @@ h1 {
 }
 
 #nav-bar{
-    border: 1px solid red;
     align-self: center;
     width: 50%;
 }
@@ -62,6 +75,7 @@ main {
     height: 100%;
     position: absolute;
     align-self: center;
+    margin-top: 100px;
 }
 
 #products-title {
@@ -78,31 +92,26 @@ main {
 #products-item {
     border: 2px solid black;
     width: 200px;
-    height: 350px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-#products-item ul{
-    display: flex;
-    flex-direction: column;
-}
-
-#products-item li{
-    margin: 5px auto;
-}
-
-#products-item .title{
+#products-item #title{
     color: white;
-    height: 25px;
+    height: 30px;
     background: gray;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
     align-content: center;
+    padding-top: 3px;
+    position: relative;
 }
 
 #products-item img {
     margin: 10px auto;
+    height: 100px;
 }
 
 #products-item .price {
@@ -110,23 +119,40 @@ main {
     margin: 15px auto;
 }
 
+#products-item ul{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+#products-item li{
+    margin: 5px auto;
+}
+
 #products-item button {
-    margin: 10px auto 0 auto;
     width: 100%;
-    font-size: 16px;
-    height: 20px;
+    font-size: 20px;
+    height: 30px;
     background: pink;
+    border-top: 2px solid black;
 }
 
 button:focus {
     outline: none;
+    color: white;
+    background-color: aqua;
 }
+
 footer {
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: pink;
     margin-top: 50px;
     border-top: 2px solid black;
+}
+
+footer ul {
+
 }
 
 @media (max-width: 600px) {
